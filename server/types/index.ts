@@ -17,7 +17,7 @@ export type User = {
 export type Counter = {
     id: number;
     value: number;
-    updateAt: string;
+    updatedAt: Date;
 }
 
 export type USER_ROLES = 'admin' | 'user';
@@ -61,4 +61,5 @@ export interface UserRepositoryInterface extends CrudRepository<User> {
 }
 
 export interface CounterRepositoryInterface extends CrudRepository<Counter> {
+    saveAll(entities: Counter[]): Promise<Counter[]>;
 }

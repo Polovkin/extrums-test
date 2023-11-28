@@ -4,7 +4,7 @@ import HttpService from "../services/Http.service";
 export type Counter = {
     id: number;
     value: number;
-    updateAt: string;
+    updatedAt: string;
 }
 
 type CounterItemProps = {

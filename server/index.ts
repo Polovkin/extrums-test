@@ -32,8 +32,6 @@ app.use('/counter', authenticateToken, countRouter);
 
 // Error handler middleware
 app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
-    console.error(err);
-    console.error(132);
     res.status(err.status || 500).json({error: err.message || 'Internal Server Error'});
 });
 
