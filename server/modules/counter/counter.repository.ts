@@ -18,6 +18,26 @@ class CounterRepository implements CounterRepositoryInterface {
         return Promise.resolve(this.db);
     }
 
+    async saveAll(entities: Counter[]): Promise<Counter[]> {
+        return new Promise((resolve, reject) => {
+            const newDb = {
+                ...MOCK_DB,
+                counter: entities
+            }
+
+            const jsonData = JSON.stringify(newDb, null, 2);
+
+            // @ts-ignore
+            fs.writeFile(jsonPath, jsonData, (err) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(entities);
+            });
+        });
+    }
+
     async findById(id: number): Promise<Counter> {
         const counter = this.db.find(u => u.id === id);
         if (!counter) {

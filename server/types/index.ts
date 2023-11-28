@@ -61,4 +61,5 @@ export interface UserRepositoryInterface extends CrudRepository<User> {
 }
 
 export interface CounterRepositoryInterface extends CrudRepository<Counter> {
+    saveAll(entities: Counter[]): Promise<Counter[]>;
 }
