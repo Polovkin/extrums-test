@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user@mail.ua",
+      "password": "password",
+      "email": "user@mail.ua",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "username": "admin@mail.ua",
+      "password": "password2",
+      "email": "admin@mail.ua",
+      "role": "admin"
+    }
+  ],
+  "counter": [
+    {
+      "id": 1,
+      "value": 19,
+      "updateAt": "2019-01-01T00:00:00.000Z",
+      "updatedAt": "2023-11-28T17:01:51.015Z"
+    }
+  ]
+}
